@@ -30,3 +30,37 @@ let theSimpsons = {
 */
 
 console.log(Object.keys(theSimpsons));
+let listKeys = Object.keys(theSimpsons);
+
+/*
+? Object.values()
+    - Returns back an array of values
+*/
+
+console.log(Object.values(theSimpsons));
+console.log(Object.values(theSimpsons.seasons));
+
+/*
+? Object.assign()
+    - Copies all enumerable properties from one or more sources
+*/
+let obj1 = {name: "Bob", age: 50};
+let obj2 = { work: "Manager"};
+let newObject = Object.assign(obj1, obj2);
+console.log(newObject);
+
+let copyOfSimpsons = Object.assign(theSimpsons);
+console.log(copyOfSimpsons);
+
+//? delete object.key
+
+delete theSimpsons.currently_running;
+console.log(theSimpsons);
+
+/*
+    ? Object.freeze()
+*/
+Object.freeze(theSimpsons);
+
+theSimpsons.id = 2; // trying to reassign
+console.log(theSimpsons.id); // won't work because of the freeze method

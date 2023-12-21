@@ -1,0 +1,15 @@
+
+class Circle {
+  constructor(radius) {
+    this.radius = radius;
+    this.circumference = 2*radius*3.14;
+    this.area = 3.14 * radius^2
+  }
+
+  announce(){
+    console.log(`Your circle has a circumference of ${circumference} and an area of ${area}`);
+  }
+}
+
+thisCircle = new Circle(10);
+thisCircle.annouce();
